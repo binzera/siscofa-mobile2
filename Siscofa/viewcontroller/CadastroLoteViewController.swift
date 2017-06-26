@@ -43,6 +43,12 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
         super.init(coder: aDecoder)
     }
     
+    override func viewDidLoad() {
+        carregarArrayFazendas()
+        carregarArrayRacas()
+        carregarArrayIdades()
+    }
+    
     @IBAction func voltar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -53,19 +59,45 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
         if(self.rdSexo.selectedSegmentIndex == 1) {
             sexo = "F"
         }
+        
         let quantidade = tfQuantidade.text!
         let peso = tfPeso.text!
-        let raca = tfRaca.text!
-        let idade = tfIdade.text!
-        let fazenda = tfFazenda.text!;
-        print(idadeSelecionado.descricao ?? "nulo")
-        print(racaSelecionado.nome!)
-        print(fazendaSelecionado.nome!)
+        //let valor = tf
+        
+        let usuarioLogado =  UtilSerializer().load()
+        
+        let parameters : Parameters = [
+            "qtdArrobas" : peso,
+            "qtdGado" : quantidade,
+            "sexo" : sexo,
+            "racaGado" :
+                ["id" : racaSelecionado.id!],
+            "idade" :
+                ["id" : idadeSelecionado.id!],
+            "fazenda" :
+                ["id" : fazendaSelecionado.id!],
+            "usuario" :
+                ["id" : usuarioLogado.id!]
+        ]
+        
+        
+        let URL = "http://localhost:8080/siscofa/lote/inserir"
+        
+        Alamofire.request(URL,  method: .post, parameters: parameters, encoding: JSONEncoding.default).responseObject { (response: DataResponse<Resultado>) in
+            if response.error == nil {
+                if let resultado = response.result.value {
+                    if let mensagem = resultado.mensagem {
+                        Alert(controller: self).show(message: mensagem)
+                    }
+                }
+            } else {
+                Alert(controller: self).show(message: (response.error?.localizedDescription)!)
+            }
+        }
     }
     
     
     @IBAction func fazendaEdit(_ sender: Any) {
-        carregarArrayFazendas()
         self.fazendaPicker = UIPickerView()
         fazendaPicker.dataSource = self
         fazendaPicker.delegate = self
@@ -75,7 +107,6 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func idadeEdit(_ sender: Any) {
-        carregarArrayIdades()
         self.idadePicker = UIPickerView()
         idadePicker.dataSource = self
         idadePicker.delegate = self
@@ -84,7 +115,6 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func racaEdit(_ sender: Any) {
-        carregarArrayRacas()
         self.racaPicker = UIPickerView()
         racaPicker.dataSource = self
         racaPicker.delegate = self

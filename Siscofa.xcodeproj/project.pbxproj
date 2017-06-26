@@ -11,6 +11,11 @@
 		DA40270D1EFDFA2A00833912 /* CadastroFazenda.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA40270C1EFDFA2A00833912 /* CadastroFazenda.xib */; };
 		DA40270F1EFDFB3300833912 /* CadastroFazendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */; };
 		DA4027111EFE06A600833912 /* UtilSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4027101EFE06A600833912 /* UtilSerializer.swift */; };
+		DA4027161F00789200833912 /* CadastroLoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4027151F00789200833912 /* CadastroLoteViewController.swift */; };
+		DA40271B1F0078E200833912 /* CadastroLote.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA40271A1F0078E200833912 /* CadastroLote.xib */; };
+		DA40271D1F00938200833912 /* Fazenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40271C1F00938200833912 /* Fazenda.swift */; };
+		DA40271F1F0095A200833912 /* Lote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40271E1F0095A200833912 /* Lote.swift */; };
+		DA4027211F00965400833912 /* Idade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4027201F00965400833912 /* Idade.swift */; };
 		DA6362961E679A7A00EDEA3A /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362931E679A7A00EDEA3A /* AlamofireObjectMapper.framework */; };
 		DA6362971E679A8300EDEA3A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362951E679A7A00EDEA3A /* ObjectMapper.framework */; };
 		DA6362981E679C3100EDEA3A /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362931E679A7A00EDEA3A /* AlamofireObjectMapper.framework */; };
@@ -131,6 +136,11 @@
 		DA40270C1EFDFA2A00833912 /* CadastroFazenda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CadastroFazenda.xib; sourceTree = "<group>"; };
 		DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroFazendaViewController.swift; sourceTree = "<group>"; };
 		DA4027101EFE06A600833912 /* UtilSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilSerializer.swift; sourceTree = "<group>"; };
+		DA4027151F00789200833912 /* CadastroLoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroLoteViewController.swift; sourceTree = "<group>"; };
+		DA40271A1F0078E200833912 /* CadastroLote.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CadastroLote.xib; sourceTree = "<group>"; };
+		DA40271C1F00938200833912 /* Fazenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fazenda.swift; sourceTree = "<group>"; };
+		DA40271E1F0095A200833912 /* Lote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lote.swift; sourceTree = "<group>"; };
+		DA4027201F00965400833912 /* Idade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idade.swift; sourceTree = "<group>"; };
 		DA6362A11E679E3200EDEA3A /* Raca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raca.swift; sourceTree = "<group>"; };
 		DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericEntity.swift; sourceTree = "<group>"; };
 		DA6362BA1E6BD8A200EDEA3A /* RacasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacasViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +211,7 @@
 				DA6362BE1E6BD98400EDEA3A /* Alert.swift */,
 				DA6362C51E6CEC4A00EDEA3A /* MenuCadastro.xib */,
 				DA40270C1EFDFA2A00833912 /* CadastroFazenda.xib */,
+				DA40271A1F0078E200833912 /* CadastroLote.xib */,
 			);
 			name = views;
 			path = Siscofa/views;
@@ -256,8 +267,11 @@
 			children = (
 				DAB1B08B1E611829008B9C14 /* infra */,
 				DAB1B0901E611892008B9C14 /* Usuario.swift */,
+				DA40271C1F00938200833912 /* Fazenda.swift */,
 				DA6362A11E679E3200EDEA3A /* Raca.swift */,
 				DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */,
+				DA40271E1F0095A200833912 /* Lote.swift */,
+				DA4027201F00965400833912 /* Idade.swift */,
 			);
 			name = model;
 			path = Siscofa/model;
@@ -272,6 +286,7 @@
 				DA6362C11E6BE81600EDEA3A /* TabBarController.swift */,
 				DA6362C31E6CEAA200EDEA3A /* MenuCadastroViewController.swift */,
 				DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */,
+				DA4027151F00789200833912 /* CadastroLoteViewController.swift */,
 			);
 			name = viewcontroller;
 			path = Siscofa/viewcontroller;
@@ -425,6 +440,7 @@
 				DA40270D1EFDFA2A00833912 /* CadastroFazenda.xib in Resources */,
 				DAB1B07A1E610B02008B9C14 /* LaunchScreen.storyboard in Resources */,
 				DAB1B0771E610B02008B9C14 /* Assets.xcassets in Resources */,
+				DA40271B1F0078E200833912 /* CadastroLote.xib in Resources */,
 				DA6362C91E6CFAD500EDEA3A /* register.png in Resources */,
 				DAB1B0751E610B02008B9C14 /* Main.storyboard in Resources */,
 				DA6362C61E6CEC4A00EDEA3A /* MenuCadastro.xib in Resources */,
@@ -497,9 +513,13 @@
 				DAB1B0861E610CE2008B9C14 /* SecondViewController.swift in Sources */,
 				DA6362BF1E6BD98400EDEA3A /* Alert.swift in Sources */,
 				DA6362A21E679E3200EDEA3A /* Raca.swift in Sources */,
+				DA4027211F00965400833912 /* Idade.swift in Sources */,
 				DAB1B08F1E611860008B9C14 /* Resultado.swift in Sources */,
 				DAA6BFBB1E66274800738EEE /* JsonHelper.swift in Sources */,
 				DAB1B06E1E610B01008B9C14 /* AppDelegate.swift in Sources */,
+				DA40271D1F00938200833912 /* Fazenda.swift in Sources */,
+				DA40271F1F0095A200833912 /* Lote.swift in Sources */,
+				DA4027161F00789200833912 /* CadastroLoteViewController.swift in Sources */,
 				DA40270F1EFDFB3300833912 /* CadastroFazendaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

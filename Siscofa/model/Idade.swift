@@ -1,11 +1,19 @@
+//
+//  Idade.swift
+//  Siscofa
+//
+//  Created by Glaubert Moreira Schult on 25/06/17.
+//  Copyright © 2017 GMS. All rights reserved.
+//
+
 import Foundation
 import ObjectMapper
 
-class Raca : GenericEntity {
+class Idade : GenericEntity {
     
     var id : Int?
-    var nome: String?
-
+    var descricao: String?
+    
     
     required init?(map: Map) {
         super.init(map: map)
@@ -14,13 +22,13 @@ class Raca : GenericEntity {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         id = aDecoder.decodeObject(forKey: "id") as? Int
-        nome = aDecoder.decodeObject(forKey: "nome") as? String
+        descricao = aDecoder.decodeObject(forKey: "descricao") as? String
     }
     
     override func encode(with aCoder: NSCoder) {
         super.encode(with: aCoder)
         aCoder.encode(id, forKey: "id")
-        aCoder.encode(nome, forKey: "nome")
+        aCoder.encode(descricao, forKey: "descricao")
     }
     
     required init() {
@@ -30,12 +38,9 @@ class Raca : GenericEntity {
     override func mapping(map: Map) {
         super.mapping(map: map)
         id <- map["id"]
-        nome <- map["nome"]
+        descricao <- map["descricao"]
         updated <- map["updated"]
         created <- map ["created"]
     }
-    
-    
-    
-
 }
+

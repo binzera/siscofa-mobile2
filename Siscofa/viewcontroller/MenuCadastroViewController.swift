@@ -32,11 +32,12 @@ class MenuCadastroViewController : UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
             case 0:
-                let viewCadastro = CadastroFazendaViewController()
-                //self.navigationController?.pushViewController(viewCadastro, animated: true)
-                self.present(viewCadastro, animated:true, completion:nil)
+                let viewCadastroFaz = CadastroFazendaViewController()
+                self.present(viewCadastroFaz, animated:true, completion:nil)
                 
-            case 1: performSegue(withIdentifier: "sg_cadastro_lote", sender: nil)
+            case 1:
+                let viewCadastroLote = CadastroLoteViewController()
+                self.present(viewCadastroLote, animated:true, completion:nil)
                 
             case 2: performSegue(withIdentifier: "sg_cadastro_movimentacao", sender: nil)
                 

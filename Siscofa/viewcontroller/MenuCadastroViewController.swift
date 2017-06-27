@@ -39,8 +39,11 @@ class MenuCadastroViewController : UIViewController, UITableViewDelegate, UITabl
                 let viewCadastroLote = CadastroLoteViewController()
                 self.present(viewCadastroLote, animated:true, completion:nil)
                 
-            case 2: performSegue(withIdentifier: "sg_cadastro_movimentacao", sender: nil)
-                
+        case 2:
+            let viewCadastroMovimentacao = MovimentacaoViewController()
+            self.present(viewCadastroMovimentacao, animated:true, completion:nil)
+
+            
             case 3: performSegue(withIdentifier: "sg_cadastro_raca", sender: nil)
                 
             default: print(indexPath.row)

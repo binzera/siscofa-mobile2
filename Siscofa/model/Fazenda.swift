@@ -15,8 +15,8 @@ class Fazenda : GenericEntity {
     var nome: String?
     var qtdAlqueires : Int?
     var usuario : Usuario?
-    //var lotes : Array<Lote>
-    //var movimentacoes : Array<MovimentacaoGado>
+    var loteGados : Array<Lote>?
+    //var movimentacaoGados : Array<MovimentacaoGado>
     
     
     required init?(map: Map) {
@@ -48,6 +48,7 @@ class Fazenda : GenericEntity {
         id <- map["id"]
         nome <- map["nome"]
         qtdAlqueires <- map["qtdAlqueires"]
+        loteGados <- map["loteGados"]
         usuario <- map["usuario"]
         updated <- map["updated"]
         created <- map ["created"]

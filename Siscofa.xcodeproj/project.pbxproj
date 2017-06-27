@@ -45,6 +45,10 @@
 		DAB1B08F1E611860008B9C14 /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B08D1E611860008B9C14 /* Resultado.swift */; };
 		DAB1B0911E611892008B9C14 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B0901E611892008B9C14 /* Usuario.swift */; };
 		DAB1B0941E611A41008B9C14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B0931E611A41008B9C14 /* LoginViewController.swift */; };
+		DACC51BD1F01F16C00F066C8 /* MovimentacaoGado.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */; };
+		DACC51C21F01F26B00F066C8 /* TipoMovimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */; };
+		DACC51C41F01F32F00F066C8 /* CadastroMovimentacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */; };
+		DACC51C61F01F3B500F066C8 /* MovimentacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51C51F01F3B500F066C8 /* MovimentacaoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +165,10 @@
 		DAB1B08D1E611860008B9C14 /* Resultado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resultado.swift; path = infra/Resultado.swift; sourceTree = "<group>"; };
 		DAB1B0901E611892008B9C14 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		DAB1B0931E611A41008B9C14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovimentacaoGado.swift; sourceTree = "<group>"; };
+		DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMovimentacao.swift; sourceTree = "<group>"; };
+		DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CadastroMovimentacao.xib; sourceTree = "<group>"; };
+		DACC51C51F01F3B500F066C8 /* MovimentacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovimentacaoViewController.swift; sourceTree = "<group>"; };
 		FF377BA628509B2F02018659 /* Pods-Siscofa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siscofa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Siscofa/Pods-Siscofa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +220,7 @@
 				DA6362C51E6CEC4A00EDEA3A /* MenuCadastro.xib */,
 				DA40270C1EFDFA2A00833912 /* CadastroFazenda.xib */,
 				DA40271A1F0078E200833912 /* CadastroLote.xib */,
+				DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */,
 			);
 			name = views;
 			path = Siscofa/views;
@@ -272,6 +281,8 @@
 				DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */,
 				DA40271E1F0095A200833912 /* Lote.swift */,
 				DA4027201F00965400833912 /* Idade.swift */,
+				DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */,
+				DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */,
 			);
 			name = model;
 			path = Siscofa/model;
@@ -287,6 +298,7 @@
 				DA6362C31E6CEAA200EDEA3A /* MenuCadastroViewController.swift */,
 				DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */,
 				DA4027151F00789200833912 /* CadastroLoteViewController.swift */,
+				DACC51C51F01F3B500F066C8 /* MovimentacaoViewController.swift */,
 			);
 			name = viewcontroller;
 			path = Siscofa/viewcontroller;
@@ -442,6 +454,7 @@
 				DAB1B0771E610B02008B9C14 /* Assets.xcassets in Resources */,
 				DA40271B1F0078E200833912 /* CadastroLote.xib in Resources */,
 				DA6362C91E6CFAD500EDEA3A /* register.png in Resources */,
+				DACC51C41F01F32F00F066C8 /* CadastroMovimentacao.xib in Resources */,
 				DAB1B0751E610B02008B9C14 /* Main.storyboard in Resources */,
 				DA6362C61E6CEC4A00EDEA3A /* MenuCadastro.xib in Resources */,
 			);
@@ -502,13 +515,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACC51C61F01F3B500F066C8 /* MovimentacaoViewController.swift in Sources */,
 				DAB1B0941E611A41008B9C14 /* LoginViewController.swift in Sources */,
 				DA6362C21E6BE81600EDEA3A /* TabBarController.swift in Sources */,
+				DACC51C21F01F26B00F066C8 /* TipoMovimentacao.swift in Sources */,
 				DAB1B08E1E611860008B9C14 /* ErrorInfo.swift in Sources */,
 				DA6362BB1E6BD8A200EDEA3A /* RacasViewController.swift in Sources */,
 				DA6362C41E6CEAA200EDEA3A /* MenuCadastroViewController.swift in Sources */,
 				DA6362B91E6BCE3D00EDEA3A /* GenericEntity.swift in Sources */,
 				DA4027111EFE06A600833912 /* UtilSerializer.swift in Sources */,
+				DACC51BD1F01F16C00F066C8 /* MovimentacaoGado.swift in Sources */,
 				DAB1B0911E611892008B9C14 /* Usuario.swift in Sources */,
 				DAB1B0861E610CE2008B9C14 /* SecondViewController.swift in Sources */,
 				DA6362BF1E6BD98400EDEA3A /* Alert.swift in Sources */,

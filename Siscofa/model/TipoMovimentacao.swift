@@ -39,7 +39,5 @@ class TipoMovimentacao : GenericEntity {
         super.mapping(map: map)
         id <- map["id"]
         descricao <- map["descricao"]
-        updated <- map["updated"]
-        created <- map ["created"]
     }
 }

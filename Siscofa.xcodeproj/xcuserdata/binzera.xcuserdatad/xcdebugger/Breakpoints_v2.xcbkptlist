@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siscofa/viewcontroller/MenuCadastroViewController.swift"
-            timestampString = "520224753.048453"
+            timestampString = "520830365.384031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -632,12 +632,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siscofa/viewcontroller/MovimentacaoViewController.swift"
-            timestampString = "520225574.528767"
+            timestampString = "520831696.915986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "carregarArrayLotes()"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "carregarArrayFazendas()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -648,12 +648,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siscofa/viewcontroller/MovimentacaoViewController.swift"
-            timestampString = "520225562.00265"
+            timestampString = "520833294.203985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "carregarArrayLotes()"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "carregarArrayFazendas()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -664,12 +664,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siscofa/viewcontroller/MovimentacaoViewController.swift"
-            timestampString = "520225735.792585"
+            timestampString = "520833294.203985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "carregarArrayLotes()"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "carregarArrayFazendas()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Siscofa/viewcontroller/MovimentacaoViewController.swift"
+            timestampString = "520833677.944081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "carregarArrayTipoMovimentacao()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

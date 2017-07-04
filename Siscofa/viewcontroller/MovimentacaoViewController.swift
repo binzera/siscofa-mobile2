@@ -62,26 +62,21 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         let quantidade = tfQuantidade.text!
         let peso = tfPeso.text!
-        //let valor = tf
-        
-        let usuarioLogado =  UtilSerializer().load()
+        let valor = tfValor.text!
         
         let parameters : Parameters = [
-            "qtdArrobas" : peso,
-            "qtdGado" : quantidade,
+            "peso" : peso,
+            "quantidade" : quantidade,
             "sexo" : sexo,
-            "racaGado" :
-                ["id" : loteSelecionado.id!],
-            "idade" :
-                ["id" : tipoMovSelecionado.id!],
+            "valor": valor,
             "fazenda" :
                 ["id" : fazendaSelecionado.id!],
-            "usuario" :
-                ["id" : usuarioLogado.id!]
+            "tipoMovimentacao" :
+                ["id" : tipoMovSelecionado.id!]
         ]
         
         
-        let URL = "http://localhost:8080/siscofa/lote/inserir"
+        let URL = "http://localhost:8080/siscofa/movimentacao/inserir"
         
         Alamofire.request(URL,  method: .post, parameters: parameters, encoding: JSONEncoding.default).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {
@@ -114,17 +109,17 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         tag = "tipoMov"
     }
     
-    @IBAction func loteEdit(_ sender: Any) {
-        if(tfFazenda.text! == ""){
-            Alert(controller: self).show(message: "Selecione a Fazenda.")
-            return
-        }
-        self.lotePicker = UIPickerView()
-        lotePicker.dataSource = self
-        lotePicker.delegate = self
-        tfLote.inputView = lotePicker
-        tag = "lote"
-    }
+//    @IBAction func loteEdit(_ sender: Any) {
+//        if(tfFazenda.text! == ""){
+//            Alert(controller: self).show(message: "Selecione a Fazenda.")
+//            return
+//        }
+//        self.lotePicker = UIPickerView()
+//        lotePicker.dataSource = self
+//        lotePicker.delegate = self
+//        tfLote.inputView = lotePicker
+//        tag = "lote"
+//    }
     
     func carregarArrayTipoMovimentacao() {
         let URL = "http://localhost:8080/siscofa/tipomov/listar"
@@ -143,39 +138,52 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func carregarArrayFazendas() {
-        let URL = "http://localhost:8080/siscofa/fazendas"
         
-        Alamofire.request(URL,  method: .get).responseObject { (response: DataResponse<Resultado>) in
+        let URL = "http://localhost:8080/siscofa/fazendas/fazendasOfUser"
+        
+        let usuarioLogado =  UtilSerializer().load()
+        
+        let parameters : Parameters = [
+            "id" : usuarioLogado.id!,
+            "nome" : usuarioLogado.nome!
+        ]
+
+        
+        Alamofire.request(URL,  method: .post, parameters: parameters, encoding: URLEncoding.httpBody).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {
                 if let resultado = response.result.value {
-                    if let arrayFazendas = Mapper<Fazenda>().mapArray(JSONObject: resultado.dados){
-                        self.fazendasArray = arrayFazendas
+                    if resultado.erro != nil {
+                        Alert(controller: self).show(message: (resultado.erro?.mensagem)!)
+                    } else {
+                        if let arrayFazendas = Mapper<Fazenda>().mapArray(JSONObject: resultado.dados){
+                            self.fazendasArray = arrayFazendas
+                        }
                     }
                 }
             } else {
-                Alert(controller: self).show(message: (response.error?.localizedDescription)!)
+                Alert(controller: self).show(message: "Erro ao carregar informações do Servidor")
             }
         }
     }
     
-    func carregarArrayLotes() {
-        let URL = "http://localhost:8080/siscofa/lote/porFazenda"
-        
-        let parameters : Parameters = [
-            "id" : fazendaSelecionado.id!
-        ]
-        Alamofire.request(URL,  method: .post, parameters: parameters, encoding: URLEncoding.httpBody).responseObject { (response: DataResponse<Resultado>) in
-            if response.error == nil {
-                if let resultado = response.result.value {
-                    if let array = Mapper<Lote>().mapArray(JSONObject: resultado.dados){
-                       self.lotesArray = array
-                    }
-                }
-            } else {
-                Alert(controller: self).show(message: (response.error?.localizedDescription)!)
-            }
-        }
-    }
+//    func carregarArrayLotes() {
+//        let URL = "http://localhost:8080/siscofa/lote/porFazenda"
+//        
+//        let parameters : Parameters = [
+//            "id" : fazendaSelecionado.id!
+//        ]
+//        Alamofire.request(URL,  method: .post, parameters: parameters, encoding: URLEncoding.httpBody).responseObject { (response: DataResponse<Resultado>) in
+//            if response.error == nil {
+//                if let resultado = response.result.value {
+//                    if let array = Mapper<Lote>().mapArray(JSONObject: resultado.dados){
+//                       self.lotesArray = array
+//                    }
+//                }
+//            } else {
+//                Alert(controller: self).show(message: (response.error?.localizedDescription)!)
+//            }
+//        }
+//    }
     
     
     
@@ -200,9 +208,9 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        if(tag == "lote") {
-            return lotesArray.count
-        }
+//        if(tag == "lote") {
+//            return lotesArray.count
+//        }
         if tag == "tipoMov" {
             return tiposMovArray.count
         }
@@ -213,9 +221,9 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if(tag == "lote") {
-            return "Lote \(lotesArray[row].id!) - \(lotesArray[row].qtdGado!) cabeças"
-        }
+//        if(tag == "lote") {
+//            return "Lote \(lotesArray[row].id!) - \(lotesArray[row].qtdGado!) cabeças"
+//        }
         if tag == "tipoMov" {
             return tiposMovArray[row].descricao! as String
         }
@@ -227,11 +235,11 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        if(tag == "lote") {
-            tfLote.text = "Lote \(lotesArray[row].id!) - \(lotesArray[row].qtdGado!) cabeças"
-            loteSelecionado = lotesArray[row]
-            self.view.endEditing(true)
-        }
+//        if(tag == "lote") {
+//            tfLote.text = "Lote \(lotesArray[row].id!) - \(lotesArray[row].qtdGado!) cabeças"
+//            loteSelecionado = lotesArray[row]
+//            self.view.endEditing(true)
+//        }
         if tag == "tipoMov" {
             tfTipoMov.text = tiposMovArray[row].descricao! as String
             tipoMovSelecionado = tiposMovArray[row]
@@ -240,7 +248,7 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         if tag == "fazenda" {
             tfFazenda.text = self.fazendasArray[row].nome! as String
             fazendaSelecionado = fazendasArray[row]
-            carregarArrayLotes()
+//            carregarArrayLotes()
             self.view.endEditing(true)
         }
         

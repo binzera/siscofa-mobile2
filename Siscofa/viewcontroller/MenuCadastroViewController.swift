@@ -23,7 +23,7 @@ class MenuCadastroViewController : UIViewController, UITableViewDelegate, UITabl
         super.init(coder: aDecoder)
     }
     
-    let menu = ["Cadastrar Fazenda", "Cadastrar Lote", "Cadastrar Movimentação", "Cadastrar Raça"];
+    let menu = ["Cadastrar Fazenda", "Cadastrar Movimentação"];
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count;
@@ -34,17 +34,10 @@ class MenuCadastroViewController : UIViewController, UITableViewDelegate, UITabl
             case 0:
                 let viewCadastroFaz = CadastroFazendaViewController()
                 self.present(viewCadastroFaz, animated:true, completion:nil)
-                
-            case 1:
-                let viewCadastroLote = CadastroLoteViewController()
-                self.present(viewCadastroLote, animated:true, completion:nil)
-                
-        case 2:
-            let viewCadastroMovimentacao = MovimentacaoViewController()
-            self.present(viewCadastroMovimentacao, animated:true, completion:nil)
-
             
-            case 3: performSegue(withIdentifier: "sg_cadastro_raca", sender: nil)
+            case 1:
+                let viewCadastroMovimentacao = MovimentacaoViewController()
+                self.present(viewCadastroMovimentacao, animated:true, completion:nil)
                 
             default: print(indexPath.row)
         }

@@ -12,10 +12,10 @@ import ObjectMapper
 class MovimentacaoGado : GenericEntity {
     
     var id : Int?
-    var qtdArrobas: Int?
-    var qtdGado : Int?
+    var peso: Int?
+    var quantidade : Int?
     var sexo : Character?
-    var valorArroba : Double?
+    var valor : Double?
     var usuario : Usuario?
     var lote : Lote?
     var fazenda : Fazenda?
@@ -31,8 +31,8 @@ class MovimentacaoGado : GenericEntity {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         id = aDecoder.decodeObject(forKey: "id") as? Int
-        qtdGado = aDecoder.decodeObject(forKey: "qtdGado") as? Int
-        qtdArrobas = aDecoder.decodeObject(forKey: "qtdArrobas") as? Int
+        quantidade = aDecoder.decodeObject(forKey: "quantidade") as? Int
+        peso = aDecoder.decodeObject(forKey: "peso") as? Int
         sexo = (aDecoder.decodeObject(forKey: "sexo") as? Character)!
         usuario = aDecoder.decodeObject(forKey: "usuario") as? Usuario
     }
@@ -40,8 +40,8 @@ class MovimentacaoGado : GenericEntity {
     override func encode(with aCoder: NSCoder) {
         super.encode(with: aCoder)
         aCoder.encode(id, forKey: "id")
-        aCoder.encode(qtdArrobas, forKey: "qtdArrobas")
-        aCoder.encode(qtdGado, forKey: "qtdGado")
+        aCoder.encode(quantidade, forKey: "peso")
+        aCoder.encode(peso, forKey: "quantidade")
         aCoder.encode(sexo, forKey: "sexo")
         aCoder.encode(fazenda, forKey: "fazenda")
         aCoder.encode(usuario, forKey: "usuario")
@@ -54,12 +54,11 @@ class MovimentacaoGado : GenericEntity {
     override func mapping(map: Map) {
         super.mapping(map: map)
         id <- map["id"]
-        qtdArrobas <- map["qtdArrobas"]
-        qtdGado <- map["qtdGado"]
+        peso <- map["peso"]
+        quantidade <- map["quantidade"]
         sexo <- map["sexo"]
-        valorArroba <- map["valorArroba"]
+        valor <- map["valor"]
         usuario <- map["usuario"]
-        lote <- map["loteGado"]
         fazenda <- map["fazenda"]
         tipoMovimentacao <- map["tipoMovimentacao"]
         updated <- map["updated"]

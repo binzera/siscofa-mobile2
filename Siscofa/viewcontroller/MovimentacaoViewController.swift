@@ -13,6 +13,8 @@ import ObjectMapper
 
 class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet var tfData: UITextField!
+    @IBOutlet var tfIdade: UITextField!
     @IBOutlet var rdSexo: UISegmentedControl!
     @IBOutlet var tfQuantidade: UITextField!
     @IBOutlet var tfPeso: UITextField!
@@ -24,6 +26,7 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     var tipoMovPicker: UIPickerView!
     var lotePicker: UIPickerView!
     var fazendaPicker: UIPickerView!
+    var datePiker: UIDatePicker!
     
     var tiposMovArray = Array<TipoMovimentacao>()
     var lotesArray = Array<Lote>()
@@ -63,12 +66,16 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         let quantidade = tfQuantidade.text!
         let peso = tfPeso.text!
         let valor = tfValor.text!
+        let idade = tfIdade.text!
+        let data = tfData.text!
         
         let parameters : Parameters = [
             "peso" : peso,
             "quantidade" : quantidade,
             "sexo" : sexo,
+            "idade" : idade,
             "valor": valor,
+            "data" : data,
             "fazenda" :
                 ["id" : fazendaSelecionado.id!],
             "tipoMovimentacao" :
@@ -79,9 +86,12 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         let URL = "http://localhost:8080/siscofa/movimentacao/inserir"
         
         Alamofire.request(URL,  method: .post, parameters: parameters, encoding: JSONEncoding.default).responseObject { (response: DataResponse<Resultado>) in
+            //Verifica se houve erro com a requisição
             if response.error == nil {
                 if let resultado = response.result.value {
-                    if let mensagem = resultado.mensagem {
+                    if resultado.erro != nil {
+                        Alert(controller: self).show(message: (resultado.erro?.mensagem)!)
+                    } else if let mensagem = resultado.mensagem {
                         Alert(controller: self).show(message: mensagem)
                     }
                 }
@@ -91,6 +101,21 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
     }
     
+    @IBAction func dataBeginEdit(_ sender: Any) {
+        self.datePiker = UIDatePicker()
+        //datePiker.setDate(Date(), animated: true)
+        datePiker.datePickerMode = UIDatePickerMode.date
+        tfData.inputView = datePiker
+        datePiker.addTarget(self, action: #selector(datePikerChangedAction), for: UIControlEvents.valueChanged)
+        
+        
+    }
+    
+    func datePikerChangedAction(sender: UIDatePicker){
+        let formatador = DateFormatter()
+        formatador.dateFormat = "YYY-MM-dd"
+        self.tfData.text = formatador.string(from: sender.date)
+    }
     
     @IBAction func fazendaEdit(_ sender: Any) {
         self.fazendaPicker = UIPickerView()

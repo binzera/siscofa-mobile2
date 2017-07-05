@@ -12,7 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovimentacaoViewController" customModule="Siscofa" customModuleProvider="target">
             <connections>
                 <outlet property="rdSexo" destination="p5k-nu-8YL" id="9UB-Mm-mAd"/>
+                <outlet property="tfData" destination="AVm-KJ-pWS" id="Wl2-m5-OQL"/>
                 <outlet property="tfFazenda" destination="Eud-lO-x5Z" id="0DJ-tY-tqT"/>
+                <outlet property="tfIdade" destination="HKE-O8-taj" id="O3R-r3-jvt"/>
                 <outlet property="tfPeso" destination="SC2-We-SY2" id="SH6-qh-0aM"/>
                 <outlet property="tfQuantidade" destination="r7B-ht-5a9" id="iKv-Xx-26B"/>
                 <outlet property="tfTipoMov" destination="uVP-a5-MBS" id="N12-O3-0bU"/>
@@ -41,14 +43,6 @@
                         <action selector="fazendaEdit:" destination="-1" eventType="editingDidBegin" id="X7E-Ua-l8M"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRQ-Ex-aTZ">
-                    <rect key="frame" x="136" y="605" width="43" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Salvar"/>
-                    <connections>
-                        <action selector="salvar:" destination="-1" eventType="editingDidBegin" id="Lcy-Wl-Bj0"/>
-                    </connections>
-                </button>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-4J-H95">
                     <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -133,22 +127,48 @@
                         <segment title="Fêmea"/>
                     </segments>
                 </segmentedControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-E9-Juf">
-                    <rect key="frame" x="208" y="289" width="48" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idade (Meses):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-E9-Juf">
+                    <rect key="frame" x="208" y="289" width="114" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKE-O8-taj">
-                    <rect key="frame" x="208" y="318" width="97" height="30"/>
+                    <rect key="frame" x="208" y="318" width="114" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVm-KJ-pWS">
+                    <rect key="frame" x="208" y="393" width="114" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="dataBeginEdit:" destination="-1" eventType="editingDidBegin" id="XGi-AE-zhY"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tF-63-e1R">
+                    <rect key="frame" x="208" y="364" width="41" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRQ-Ex-aTZ">
+                    <rect key="frame" x="136" y="545" width="43" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Salvar"/>
+                    <connections>
+                        <action selector="salvar:" destination="-1" eventType="touchUpInside" id="HPY-Qs-H43"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="32.5" y="105.5"/>
         </view>
     </objects>
 </document>

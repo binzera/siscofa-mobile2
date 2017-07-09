@@ -21,9 +21,9 @@ class TabBarController : UITabBarController, UITabBarControllerDelegate {
         
         let tabOneBarItem = UITabBarItem(title: "Cadastro", image: UIImage(named: "register.png"), selectedImage: UIImage(named: "register.png"))
         
-        let tabTwo = SecondViewController()
+        let tabTwo = RelatoriosViewController()
         
-        let tabTwoBarItem = UITabBarItem(title: "Teste", image: UIImage(named: "register.png"), selectedImage: UIImage(named: "register.png"))
+        let tabTwoBarItem = UITabBarItem(title: "Relatórios", image: UIImage(named: "statistics.png"), selectedImage: UIImage(named: "statistics.png"))
         
         tabOne.tabBarItem = tabOneBarItem
         tabOne.view.backgroundColor = UIColor.white

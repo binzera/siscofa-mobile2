@@ -28,23 +28,28 @@
 		DA6362B01E6BAB8800EDEA3A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */; };
 		DA6362B11E6BAB8800EDEA3A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA6362B91E6BCE3D00EDEA3A /* GenericEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */; };
-		DA6362BB1E6BD8A200EDEA3A /* RacasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362BA1E6BD8A200EDEA3A /* RacasViewController.swift */; };
 		DA6362BF1E6BD98400EDEA3A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362BE1E6BD98400EDEA3A /* Alert.swift */; };
 		DA6362C21E6BE81600EDEA3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362C11E6BE81600EDEA3A /* TabBarController.swift */; };
 		DA6362C41E6CEAA200EDEA3A /* MenuCadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362C31E6CEAA200EDEA3A /* MenuCadastroViewController.swift */; };
 		DA6362C61E6CEC4A00EDEA3A /* MenuCadastro.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6362C51E6CEC4A00EDEA3A /* MenuCadastro.xib */; };
 		DA6362C91E6CFAD500EDEA3A /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6362C81E6CFAD500EDEA3A /* register.png */; };
+		DA949D951F0DB68A0075355A /* statistics.png in Resources */ = {isa = PBXBuildFile; fileRef = DA949D941F0DB68A0075355A /* statistics.png */; };
+		DA949D971F0DB6EA0075355A /* RelatoriosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA949D961F0DB6EA0075355A /* RelatoriosViewController.swift */; };
+		DA949D991F0DB73F0075355A /* MenuRelatorios.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA949D981F0DB73F0075355A /* MenuRelatorios.xib */; };
 		DAA6BFB81E66242400738EEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3F3AA11E612C5400793C39 /* Alamofire.framework */; };
 		DAA6BFBB1E66274800738EEE /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6BFBA1E66274800738EEE /* JsonHelper.swift */; };
 		DAB1B06E1E610B01008B9C14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B06D1E610B01008B9C14 /* AppDelegate.swift */; };
 		DAB1B0751E610B02008B9C14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB1B0731E610B02008B9C14 /* Main.storyboard */; };
 		DAB1B0771E610B02008B9C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB1B0761E610B02008B9C14 /* Assets.xcassets */; };
 		DAB1B07A1E610B02008B9C14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB1B0781E610B02008B9C14 /* LaunchScreen.storyboard */; };
-		DAB1B0861E610CE2008B9C14 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B0841E610CE2008B9C14 /* SecondViewController.swift */; };
 		DAB1B08E1E611860008B9C14 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B08C1E611860008B9C14 /* ErrorInfo.swift */; };
 		DAB1B08F1E611860008B9C14 /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B08D1E611860008B9C14 /* Resultado.swift */; };
 		DAB1B0911E611892008B9C14 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B0901E611892008B9C14 /* Usuario.swift */; };
 		DAB1B0941E611A41008B9C14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B0931E611A41008B9C14 /* LoginViewController.swift */; };
+		DAB4F6331F11BDFB008EEE2C /* RelMovimentacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4F6321F11BDFB008EEE2C /* RelMovimentacaoViewController.swift */; };
+		DAB4F63A1F11BEB5008EEE2C /* RelMovimentacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F6391F11BEB5008EEE2C /* RelMovimentacao.xib */; };
+		DAB4F63F1F11D8A2008EEE2C /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4F63D1F11D8A2008EEE2C /* CustomCellTableViewCell.swift */; };
+		DAB4F6401F11D8A2008EEE2C /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F63E1F11D8A2008EEE2C /* CustomCellTableViewCell.xib */; };
 		DACC51BD1F01F16C00F066C8 /* MovimentacaoGado.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */; };
 		DACC51C21F01F26B00F066C8 /* TipoMovimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */; };
 		DACC51C41F01F32F00F066C8 /* CadastroMovimentacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */; };
@@ -147,12 +152,14 @@
 		DA4027201F00965400833912 /* Idade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idade.swift; sourceTree = "<group>"; };
 		DA6362A11E679E3200EDEA3A /* Raca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raca.swift; sourceTree = "<group>"; };
 		DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericEntity.swift; sourceTree = "<group>"; };
-		DA6362BA1E6BD8A200EDEA3A /* RacasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacasViewController.swift; sourceTree = "<group>"; };
 		DA6362BE1E6BD98400EDEA3A /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DA6362C11E6BE81600EDEA3A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DA6362C31E6CEAA200EDEA3A /* MenuCadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCadastroViewController.swift; sourceTree = "<group>"; };
 		DA6362C51E6CEC4A00EDEA3A /* MenuCadastro.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCadastro.xib; sourceTree = "<group>"; };
 		DA6362C81E6CFAD500EDEA3A /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
+		DA949D941F0DB68A0075355A /* statistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statistics.png; sourceTree = "<group>"; };
+		DA949D961F0DB6EA0075355A /* RelatoriosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatoriosViewController.swift; sourceTree = "<group>"; };
+		DA949D981F0DB73F0075355A /* MenuRelatorios.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuRelatorios.xib; sourceTree = "<group>"; };
 		DAA6BFBA1E66274800738EEE /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		DAB1B06A1E610B01008B9C14 /* Siscofa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siscofa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB1B06D1E610B01008B9C14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,11 +167,14 @@
 		DAB1B0761E610B02008B9C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAB1B0791E610B02008B9C14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAB1B07B1E610B02008B9C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAB1B0841E610CE2008B9C14 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DAB1B08C1E611860008B9C14 /* ErrorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorInfo.swift; path = infra/ErrorInfo.swift; sourceTree = "<group>"; };
 		DAB1B08D1E611860008B9C14 /* Resultado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resultado.swift; path = infra/Resultado.swift; sourceTree = "<group>"; };
 		DAB1B0901E611892008B9C14 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		DAB1B0931E611A41008B9C14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DAB4F6321F11BDFB008EEE2C /* RelMovimentacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelMovimentacaoViewController.swift; sourceTree = "<group>"; };
+		DAB4F6391F11BEB5008EEE2C /* RelMovimentacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelMovimentacao.xib; sourceTree = "<group>"; };
+		DAB4F63D1F11D8A2008EEE2C /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		DAB4F63E1F11D8A2008EEE2C /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 		DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovimentacaoGado.swift; sourceTree = "<group>"; };
 		DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMovimentacao.swift; sourceTree = "<group>"; };
 		DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CadastroMovimentacao.xib; sourceTree = "<group>"; };
@@ -221,6 +231,8 @@
 				DA40270C1EFDFA2A00833912 /* CadastroFazenda.xib */,
 				DA40271A1F0078E200833912 /* CadastroLote.xib */,
 				DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */,
+				DA949D981F0DB73F0075355A /* MenuRelatorios.xib */,
+				DAB4F6391F11BEB5008EEE2C /* RelMovimentacao.xib */,
 			);
 			name = views;
 			path = Siscofa/views;
@@ -229,6 +241,7 @@
 		DA6362C71E6CFAD500EDEA3A /* img */ = {
 			isa = PBXGroup;
 			children = (
+				DA949D941F0DB68A0075355A /* statistics.png */,
 				DA6362C81E6CFAD500EDEA3A /* register.png */,
 			);
 			name = img;
@@ -291,14 +304,12 @@
 		DAB1B0821E610CE2008B9C14 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				DAB1B0841E610CE2008B9C14 /* SecondViewController.swift */,
+				DAB4F6381F11BE28008EEE2C /* cadastros */,
+				DAB4F6371F11BE11008EEE2C /* relatorios */,
 				DAB1B0931E611A41008B9C14 /* LoginViewController.swift */,
-				DA6362BA1E6BD8A200EDEA3A /* RacasViewController.swift */,
 				DA6362C11E6BE81600EDEA3A /* TabBarController.swift */,
 				DA6362C31E6CEAA200EDEA3A /* MenuCadastroViewController.swift */,
-				DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */,
-				DA4027151F00789200833912 /* CadastroLoteViewController.swift */,
-				DACC51C51F01F3B500F066C8 /* MovimentacaoViewController.swift */,
+				DA949D961F0DB6EA0075355A /* RelatoriosViewController.swift */,
 			);
 			name = viewcontroller;
 			path = Siscofa/viewcontroller;
@@ -321,6 +332,26 @@
 			);
 			name = Util;
 			path = Siscofa/Util;
+			sourceTree = "<group>";
+		};
+		DAB4F6371F11BE11008EEE2C /* relatorios */ = {
+			isa = PBXGroup;
+			children = (
+				DAB4F6321F11BDFB008EEE2C /* RelMovimentacaoViewController.swift */,
+				DAB4F63D1F11D8A2008EEE2C /* CustomCellTableViewCell.swift */,
+				DAB4F63E1F11D8A2008EEE2C /* CustomCellTableViewCell.xib */,
+			);
+			name = relatorios;
+			sourceTree = "<group>";
+		};
+		DAB4F6381F11BE28008EEE2C /* cadastros */ = {
+			isa = PBXGroup;
+			children = (
+				DACC51C51F01F3B500F066C8 /* MovimentacaoViewController.swift */,
+				DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */,
+				DA4027151F00789200833912 /* CadastroLoteViewController.swift */,
+			);
+			name = cadastros;
 			sourceTree = "<group>";
 		};
 		E33CCB52FA355147F9386124 /* Pods */ = {
@@ -450,11 +481,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA40270D1EFDFA2A00833912 /* CadastroFazenda.xib in Resources */,
+				DAB4F6401F11D8A2008EEE2C /* CustomCellTableViewCell.xib in Resources */,
+				DA949D951F0DB68A0075355A /* statistics.png in Resources */,
+				DAB4F63A1F11BEB5008EEE2C /* RelMovimentacao.xib in Resources */,
 				DAB1B07A1E610B02008B9C14 /* LaunchScreen.storyboard in Resources */,
 				DAB1B0771E610B02008B9C14 /* Assets.xcassets in Resources */,
 				DA40271B1F0078E200833912 /* CadastroLote.xib in Resources */,
 				DA6362C91E6CFAD500EDEA3A /* register.png in Resources */,
 				DACC51C41F01F32F00F066C8 /* CadastroMovimentacao.xib in Resources */,
+				DA949D991F0DB73F0075355A /* MenuRelatorios.xib in Resources */,
 				DAB1B0751E610B02008B9C14 /* Main.storyboard in Resources */,
 				DA6362C61E6CEC4A00EDEA3A /* MenuCadastro.xib in Resources */,
 			);
@@ -518,15 +553,14 @@
 				DACC51C61F01F3B500F066C8 /* MovimentacaoViewController.swift in Sources */,
 				DAB1B0941E611A41008B9C14 /* LoginViewController.swift in Sources */,
 				DA6362C21E6BE81600EDEA3A /* TabBarController.swift in Sources */,
+				DAB4F6331F11BDFB008EEE2C /* RelMovimentacaoViewController.swift in Sources */,
 				DACC51C21F01F26B00F066C8 /* TipoMovimentacao.swift in Sources */,
 				DAB1B08E1E611860008B9C14 /* ErrorInfo.swift in Sources */,
-				DA6362BB1E6BD8A200EDEA3A /* RacasViewController.swift in Sources */,
 				DA6362C41E6CEAA200EDEA3A /* MenuCadastroViewController.swift in Sources */,
 				DA6362B91E6BCE3D00EDEA3A /* GenericEntity.swift in Sources */,
 				DA4027111EFE06A600833912 /* UtilSerializer.swift in Sources */,
 				DACC51BD1F01F16C00F066C8 /* MovimentacaoGado.swift in Sources */,
 				DAB1B0911E611892008B9C14 /* Usuario.swift in Sources */,
-				DAB1B0861E610CE2008B9C14 /* SecondViewController.swift in Sources */,
 				DA6362BF1E6BD98400EDEA3A /* Alert.swift in Sources */,
 				DA6362A21E679E3200EDEA3A /* Raca.swift in Sources */,
 				DA4027211F00965400833912 /* Idade.swift in Sources */,
@@ -534,7 +568,9 @@
 				DAA6BFBB1E66274800738EEE /* JsonHelper.swift in Sources */,
 				DAB1B06E1E610B01008B9C14 /* AppDelegate.swift in Sources */,
 				DA40271D1F00938200833912 /* Fazenda.swift in Sources */,
+				DA949D971F0DB6EA0075355A /* RelatoriosViewController.swift in Sources */,
 				DA40271F1F0095A200833912 /* Lote.swift in Sources */,
+				DAB4F63F1F11D8A2008EEE2C /* CustomCellTableViewCell.swift in Sources */,
 				DA4027161F00789200833912 /* CadastroLoteViewController.swift in Sources */,
 				DA40270F1EFDFB3300833912 /* CadastroFazendaViewController.swift in Sources */,
 			);

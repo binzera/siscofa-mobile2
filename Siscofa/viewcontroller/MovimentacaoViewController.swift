@@ -58,6 +58,22 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     
     @IBAction func salvar(_ sender: Any) {
+        if(tfFazenda.text == ""){
+            return Alert(controller: self).show(message: "Informe a Fazenda dessa movimentação.")
+        }
+        if(tfTipoMov.text == ""){
+            return Alert(controller: self).show(message: "Informe tipo de movimentação.")
+        }
+        if(tfQuantidade.text == ""){
+            return Alert(controller: self).show(message: "Informe a quantidade de cabeças.")
+        }
+        if(tfPeso.text == ""){
+            return Alert(controller: self).show(message: "Informe peso médio em arrobas")
+        }
+        if tfData.text == "" {
+            return Alert(controller: self).show(message: "Informe a data dessa movimentação.")
+        }
+        
         var sexo = "M"
         if(self.rdSexo.selectedSegmentIndex == 1) {
             sexo = "F"
@@ -209,33 +225,13 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
 //            }
 //        }
 //    }
-    
-    
-    
-    func validarCamposFormulario(){
-        if(tfQuantidade.text == ""){
-            Alert(controller: self).show(message: "Informe a quantidade de cabeças desse lote")
-            return
-        }
-        if(tfPeso.text == ""){
-            Alert(controller: self).show(message: "Informe quantidade de arrobas desse lote.")
-            return
-        }
-        if(tfFazenda.text == ""){
-            Alert(controller: self).show(message: "Informe a Fazenda desse lote.")
-            return
-        }
-    }
-    
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-//        if(tag == "lote") {
-//            return lotesArray.count
-//        }
         if tag == "tipoMov" {
             return tiposMovArray.count
         }
@@ -246,9 +242,6 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        if(tag == "lote") {
-//            return "Lote \(lotesArray[row].id!) - \(lotesArray[row].qtdGado!) cabeças"
-//        }
         if tag == "tipoMov" {
             return tiposMovArray[row].descricao! as String
         }
@@ -260,11 +253,6 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-//        if(tag == "lote") {
-//            tfLote.text = "Lote \(lotesArray[row].id!) - \(lotesArray[row].qtdGado!) cabeças"
-//            loteSelecionado = lotesArray[row]
-//            self.view.endEditing(true)
-//        }
         if tag == "tipoMov" {
             tfTipoMov.text = tiposMovArray[row].descricao! as String
             tipoMovSelecionado = tiposMovArray[row]
@@ -273,7 +261,6 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         if tag == "fazenda" {
             tfFazenda.text = self.fazendasArray[row].nome! as String
             fazendaSelecionado = fazendasArray[row]
-//            carregarArrayLotes()
             self.view.endEditing(true)
         }
         

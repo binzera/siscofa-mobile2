@@ -81,7 +81,7 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
         ]
         
         
-        let URL = "http://localhost:8080/siscofa/lote/inserir"
+        let URL = Configuracao.getWSURL() + "/lote/inserir"
         
         Alamofire.request(URL,  method: .post, parameters: parameters, encoding: JSONEncoding.default).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {
@@ -139,7 +139,7 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func carregarArrayFazendas() {
-        let URL = "http://localhost:8080/siscofa/fazendas"
+        let URL = Configuracao.getWSURL() + "/fazendas"
         
         Alamofire.request(URL,  method: .get).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {
@@ -155,7 +155,7 @@ class CadastroLoteViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func carregarArrayIdades() {
-        let URL = "http://localhost:8080/siscofa/idades"
+        let URL = Configuracao.getWSURL() + "/idades"
         
         Alamofire.request(URL,  method: .get).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {

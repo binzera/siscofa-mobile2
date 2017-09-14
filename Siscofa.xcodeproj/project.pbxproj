@@ -16,6 +16,7 @@
 		DA40271D1F00938200833912 /* Fazenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40271C1F00938200833912 /* Fazenda.swift */; };
 		DA40271F1F0095A200833912 /* Lote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40271E1F0095A200833912 /* Lote.swift */; };
 		DA4027211F00965400833912 /* Idade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4027201F00965400833912 /* Idade.swift */; };
+		DA410D421F679A7F0096CA94 /* Configuracao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA410D411F679A7F0096CA94 /* Configuracao.swift */; };
 		DA6362961E679A7A00EDEA3A /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362931E679A7A00EDEA3A /* AlamofireObjectMapper.framework */; };
 		DA6362971E679A8300EDEA3A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362951E679A7A00EDEA3A /* ObjectMapper.framework */; };
 		DA6362981E679C3100EDEA3A /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362931E679A7A00EDEA3A /* AlamofireObjectMapper.framework */; };
@@ -23,10 +24,6 @@
 		DA63629D1E679C3B00EDEA3A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362951E679A7A00EDEA3A /* ObjectMapper.framework */; };
 		DA63629E1E679C3B00EDEA3A /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362951E679A7A00EDEA3A /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA6362A21E679E3200EDEA3A /* Raca.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362A11E679E3200EDEA3A /* Raca.swift */; };
-		DA6362AE1E6BAB3000EDEA3A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */; };
-		DA6362AF1E6BAB3500EDEA3A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362AB1E6BAB3000EDEA3A /* Realm.framework */; };
-		DA6362B01E6BAB8800EDEA3A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */; };
-		DA6362B11E6BAB8800EDEA3A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA6362B91E6BCE3D00EDEA3A /* GenericEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */; };
 		DA6362BF1E6BD98400EDEA3A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362BE1E6BD98400EDEA3A /* Alert.swift */; };
 		DA6362C21E6BE81600EDEA3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6362C11E6BE81600EDEA3A /* TabBarController.swift */; };
@@ -38,6 +35,7 @@
 		DA949D991F0DB73F0075355A /* MenuRelatorios.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA949D981F0DB73F0075355A /* MenuRelatorios.xib */; };
 		DAA6BFB81E66242400738EEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3F3AA11E612C5400793C39 /* Alamofire.framework */; };
 		DAA6BFBB1E66274800738EEE /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6BFBA1E66274800738EEE /* JsonHelper.swift */; };
+		DAA8A6CF1F68EB8600B05CE5 /* ExtensionKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8A6CE1F68EB8600B05CE5 /* ExtensionKeyboard.swift */; };
 		DAB1B06E1E610B01008B9C14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1B06D1E610B01008B9C14 /* AppDelegate.swift */; };
 		DAB1B0751E610B02008B9C14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB1B0731E610B02008B9C14 /* Main.storyboard */; };
 		DAB1B0771E610B02008B9C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB1B0761E610B02008B9C14 /* Assets.xcassets */; };
@@ -50,6 +48,8 @@
 		DAB4F63A1F11BEB5008EEE2C /* RelMovimentacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F6391F11BEB5008EEE2C /* RelMovimentacao.xib */; };
 		DAB4F63F1F11D8A2008EEE2C /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4F63D1F11D8A2008EEE2C /* CustomCellTableViewCell.swift */; };
 		DAB4F6401F11D8A2008EEE2C /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F63E1F11D8A2008EEE2C /* CustomCellTableViewCell.xib */; };
+		DAB4F6421F13383D008EEE2C /* ListagemFazendas.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F6411F13383D008EEE2C /* ListagemFazendas.xib */; };
+		DAB4F6441F13390E008EEE2C /* ListagemFazendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4F6431F13390E008EEE2C /* ListagemFazendasViewController.swift */; };
 		DACC51BD1F01F16C00F066C8 /* MovimentacaoGado.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */; };
 		DACC51C21F01F26B00F066C8 /* TipoMovimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */; };
 		DACC51C41F01F32F00F066C8 /* CadastroMovimentacao.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */; };
@@ -99,27 +99,6 @@
 			remoteGlobalIDString = 2F5622F3B18DF497981AB58C6D1FC72F;
 			remoteInfo = ObjectMapper;
 		};
-		DA6362AA1E6BAB3000EDEA3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA3F3A9B1E612C5300793C39 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 99BA38D8FF872168F657A5BE11237F5D;
-			remoteInfo = Realm;
-		};
-		DA6362AC1E6BAB3000EDEA3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA3F3A9B1E612C5300793C39 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 427C34BE74907E89547CBC95ADE865D3;
-			remoteInfo = RealmSwift;
-		};
-		DA6362B21E6BAB8800EDEA3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA3F3A9B1E612C5300793C39 /* Pods.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E52E9D51218C3878ED0DBCD89683D6ED;
-			remoteInfo = RealmSwift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,7 +110,6 @@
 			files = (
 				DA63629E1E679C3B00EDEA3A /* ObjectMapper.framework in Embed Frameworks */,
 				DA6362991E679C3100EDEA3A /* AlamofireObjectMapper.framework in Embed Frameworks */,
-				DA6362B11E6BAB8800EDEA3A /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +128,7 @@
 		DA40271C1F00938200833912 /* Fazenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fazenda.swift; sourceTree = "<group>"; };
 		DA40271E1F0095A200833912 /* Lote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lote.swift; sourceTree = "<group>"; };
 		DA4027201F00965400833912 /* Idade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idade.swift; sourceTree = "<group>"; };
+		DA410D411F679A7F0096CA94 /* Configuracao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuracao.swift; sourceTree = "<group>"; };
 		DA6362A11E679E3200EDEA3A /* Raca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raca.swift; sourceTree = "<group>"; };
 		DA6362B81E6BCE3D00EDEA3A /* GenericEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericEntity.swift; sourceTree = "<group>"; };
 		DA6362BE1E6BD98400EDEA3A /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -161,6 +140,7 @@
 		DA949D961F0DB6EA0075355A /* RelatoriosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatoriosViewController.swift; sourceTree = "<group>"; };
 		DA949D981F0DB73F0075355A /* MenuRelatorios.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuRelatorios.xib; sourceTree = "<group>"; };
 		DAA6BFBA1E66274800738EEE /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		DAA8A6CE1F68EB8600B05CE5 /* ExtensionKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionKeyboard.swift; sourceTree = "<group>"; };
 		DAB1B06A1E610B01008B9C14 /* Siscofa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siscofa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB1B06D1E610B01008B9C14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAB1B0741E610B02008B9C14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +155,8 @@
 		DAB4F6391F11BEB5008EEE2C /* RelMovimentacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelMovimentacao.xib; sourceTree = "<group>"; };
 		DAB4F63D1F11D8A2008EEE2C /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		DAB4F63E1F11D8A2008EEE2C /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
+		DAB4F6411F13383D008EEE2C /* ListagemFazendas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListagemFazendas.xib; sourceTree = "<group>"; };
+		DAB4F6431F13390E008EEE2C /* ListagemFazendasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListagemFazendasViewController.swift; sourceTree = "<group>"; };
 		DACC51BC1F01F16C00F066C8 /* MovimentacaoGado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovimentacaoGado.swift; sourceTree = "<group>"; };
 		DACC51C11F01F26B00F066C8 /* TipoMovimentacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMovimentacao.swift; sourceTree = "<group>"; };
 		DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CadastroMovimentacao.xib; sourceTree = "<group>"; };
@@ -187,9 +169,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA6362AF1E6BAB3500EDEA3A /* Realm.framework in Frameworks */,
-				DA6362AE1E6BAB3000EDEA3A /* RealmSwift.framework in Frameworks */,
-				DA6362B01E6BAB8800EDEA3A /* RealmSwift.framework in Frameworks */,
 				DA63629D1E679C3B00EDEA3A /* ObjectMapper.framework in Frameworks */,
 				DA6362971E679A8300EDEA3A /* ObjectMapper.framework in Frameworks */,
 				DA6362961E679A7A00EDEA3A /* AlamofireObjectMapper.framework in Frameworks */,
@@ -217,8 +196,6 @@
 				DA6362931E679A7A00EDEA3A /* AlamofireObjectMapper.framework */,
 				DA6362951E679A7A00EDEA3A /* ObjectMapper.framework */,
 				DA3F3AA31E612C5400793C39 /* Pods_Siscofa.framework */,
-				DA6362AB1E6BAB3000EDEA3A /* Realm.framework */,
-				DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +210,7 @@
 				DACC51C31F01F32F00F066C8 /* CadastroMovimentacao.xib */,
 				DA949D981F0DB73F0075355A /* MenuRelatorios.xib */,
 				DAB4F6391F11BEB5008EEE2C /* RelMovimentacao.xib */,
+				DAB4F6411F13383D008EEE2C /* ListagemFazendas.xib */,
 			);
 			name = views;
 			path = Siscofa/views;
@@ -329,6 +307,7 @@
 			children = (
 				DAA6BFBA1E66274800738EEE /* JsonHelper.swift */,
 				DA4027101EFE06A600833912 /* UtilSerializer.swift */,
+				DA410D411F679A7F0096CA94 /* Configuracao.swift */,
 			);
 			name = Util;
 			path = Siscofa/Util;
@@ -350,6 +329,8 @@
 				DACC51C51F01F3B500F066C8 /* MovimentacaoViewController.swift */,
 				DA40270E1EFDFB3300833912 /* CadastroFazendaViewController.swift */,
 				DA4027151F00789200833912 /* CadastroLoteViewController.swift */,
+				DAB4F6431F13390E008EEE2C /* ListagemFazendasViewController.swift */,
+				DAA8A6CE1F68EB8600B05CE5 /* ExtensionKeyboard.swift */,
 			);
 			name = cadastros;
 			sourceTree = "<group>";
@@ -383,7 +364,6 @@
 			dependencies = (
 				DA63629B1E679C3100EDEA3A /* PBXTargetDependency */,
 				DA6362A01E679C3B00EDEA3A /* PBXTargetDependency */,
-				DA6362B31E6BAB8800EDEA3A /* PBXTargetDependency */,
 			);
 			name = Siscofa;
 			productName = Siscofa;
@@ -402,6 +382,7 @@
 				TargetAttributes = {
 					DAB1B0691E610B01008B9C14 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MNB8ZNMB32;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -459,20 +440,6 @@
 			remoteRef = DA6362941E679A7A00EDEA3A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DA6362AB1E6BAB3000EDEA3A /* Realm.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Realm.framework;
-			remoteRef = DA6362AA1E6BAB3000EDEA3A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DA6362AD1E6BAB3000EDEA3A /* RealmSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RealmSwift.framework;
-			remoteRef = DA6362AC1E6BAB3000EDEA3A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -492,6 +459,7 @@
 				DA949D991F0DB73F0075355A /* MenuRelatorios.xib in Resources */,
 				DAB1B0751E610B02008B9C14 /* Main.storyboard in Resources */,
 				DA6362C61E6CEC4A00EDEA3A /* MenuCadastro.xib in Resources */,
+				DAB4F6421F13383D008EEE2C /* ListagemFazendas.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB4F6441F13390E008EEE2C /* ListagemFazendasViewController.swift in Sources */,
 				DACC51C61F01F3B500F066C8 /* MovimentacaoViewController.swift in Sources */,
 				DAB1B0941E611A41008B9C14 /* LoginViewController.swift in Sources */,
 				DA6362C21E6BE81600EDEA3A /* TabBarController.swift in Sources */,
@@ -561,8 +530,10 @@
 				DA4027111EFE06A600833912 /* UtilSerializer.swift in Sources */,
 				DACC51BD1F01F16C00F066C8 /* MovimentacaoGado.swift in Sources */,
 				DAB1B0911E611892008B9C14 /* Usuario.swift in Sources */,
+				DAA8A6CF1F68EB8600B05CE5 /* ExtensionKeyboard.swift in Sources */,
 				DA6362BF1E6BD98400EDEA3A /* Alert.swift in Sources */,
 				DA6362A21E679E3200EDEA3A /* Raca.swift in Sources */,
+				DA410D421F679A7F0096CA94 /* Configuracao.swift in Sources */,
 				DA4027211F00965400833912 /* Idade.swift in Sources */,
 				DAB1B08F1E611860008B9C14 /* Resultado.swift in Sources */,
 				DAA6BFBB1E66274800738EEE /* JsonHelper.swift in Sources */,
@@ -588,11 +559,6 @@
 			isa = PBXTargetDependency;
 			name = ObjectMapper;
 			targetProxy = DA63629F1E679C3B00EDEA3A /* PBXContainerItemProxy */;
-		};
-		DA6362B31E6BAB8800EDEA3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RealmSwift;
-			targetProxy = DA6362B21E6BAB8800EDEA3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -713,11 +679,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MNB8ZNMB32;
 				INFOPLIST_FILE = Siscofa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.gms.Siscofa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -727,11 +696,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MNB8ZNMB32;
 				INFOPLIST_FILE = Siscofa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.gms.Siscofa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

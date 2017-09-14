@@ -16,7 +16,7 @@ class LoginViewController : UIViewController {
             "senha" : senhaTextField.text!
         ]
         
-        let URL = "http://localhost:8080/siscofa/usuarios/logar"
+        let URL = Configuracao.getWSURL() + "/usuarios/logar"
         
         Alamofire.request(URL,  method: .post, parameters: parameters, encoding: URLEncoding.httpBody).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {

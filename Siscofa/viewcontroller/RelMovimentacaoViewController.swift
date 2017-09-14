@@ -29,12 +29,22 @@ class RelMovimentacaoViewController : UIViewController, UIPickerViewDelegate, UI
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func adicionar(_ sender: Any) {
+        let viewCadastroMovimentacao = MovimentacaoViewController()
+        self.present(viewCadastroMovimentacao, animated:true, completion:nil)
+    }
+    
     init() {
         super.init(nibName: "RelMovimentacao", bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tbMovs.reloadData()
+        self.tbMovs.reloadInputViews()
     }
     
     @IBAction func fazendaEdit(_ sender: Any) {
@@ -48,7 +58,7 @@ class RelMovimentacaoViewController : UIViewController, UIPickerViewDelegate, UI
     
     func carregarArrayFazendas() {
         
-        let URL = "http://localhost:8080/siscofa/fazendas/fazendasOfUser"
+        let URL = Configuracao.getWSURL() + "/fazendas/fazendasOfUser"
         
         let usuarioLogado =  UtilSerializer().load()
         
@@ -65,6 +75,7 @@ class RelMovimentacaoViewController : UIViewController, UIPickerViewDelegate, UI
                     } else {
                         if let arrayFazendas = Mapper<Fazenda>().mapArray(JSONObject: resultado.dados){
                             self.fazendasArray = arrayFazendas
+                            self.tbMovs.reloadData()
                         }
                     }
                 }
@@ -75,7 +86,7 @@ class RelMovimentacaoViewController : UIViewController, UIPickerViewDelegate, UI
     }
     
     func carregarMovimentacoes(){
-        let URL = "http://localhost:8080/siscofa/movimentacao/porFazenda"
+        let URL = Configuracao.getWSURL() + "/movimentacao/porFazenda"
         
         let parameters : Parameters = [
             "id" : fazendaSelecionado.id!
@@ -155,10 +166,15 @@ class RelMovimentacaoViewController : UIViewController, UIPickerViewDelegate, UI
         let item = movimentacoesArray[row]
         self.tbMovs.register(UINib(nibName: "CustomCellTableViewCell", bundle: nil), forCellReuseIdentifier: "cellMov")
         let cell = self.tbMovs.dequeueReusableCell(withIdentifier: "cellMov", for: indexPath) as! CustomCellTableViewCell
+        cell.lbData.text = String(describing: item.data!)
+        cell.lbTipo.text = ""
+        if item.tipoMovimentacao != nil {
+            cell.lbTipo.text = String(describing: item.tipoMovimentacao!.descricao!)
+        }
         cell.lbPeso.text = String(describing: item.peso!)
         cell.lbQuantidade.text = String(describing: item.quantidade!)
         cell.lbValor.text = String(describing: item.valor!)
-        cell.lbSexo.text = String(describing: item.sexo)
+        cell.lbSexo.text = String(describing: item.sexo!)
         return cell
     }
     

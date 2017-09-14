@@ -26,6 +26,7 @@ class RelatoriosViewController : UIViewController, UITableViewDelegate, UITableV
     
     let menu = ["Visualizar Movimentações", "Visualizar Fazendas"];
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count;
     }

@@ -15,8 +15,8 @@ class Fazenda : GenericEntity {
     var nome: String?
     var qtdAlqueires : Int?
     var usuario : Usuario?
-    var loteGados : Array<Lote>?
-    //var movimentacaoGados : Array<MovimentacaoGado>
+    //var loteGados : Array<Lote>?
+    //var movimentacaoGados : Array<MovimentacaoGado>?
     
     
     required init?(map: Map) {
@@ -29,6 +29,7 @@ class Fazenda : GenericEntity {
         nome = aDecoder.decodeObject(forKey: "nome") as? String
         qtdAlqueires = aDecoder.decodeObject(forKey: "qtdAlqueires") as? Int
         usuario = aDecoder.decodeObject(forKey: "usuario") as? Usuario
+        //movimentacaoGados = aDecoder.decodeObject(forKey: "movimentacaoGado") as? Array<MovimentacaoGado>
     }
     
     override func encode(with aCoder: NSCoder) {
@@ -48,7 +49,7 @@ class Fazenda : GenericEntity {
         id <- map["id"]
         nome <- map["nome"]
         qtdAlqueires <- map["qtdAlqueires"]
-        loteGados <- map["loteGados"]
+        
         usuario <- map["usuario"]
         updated <- map["updated"]
         created <- map ["created"]

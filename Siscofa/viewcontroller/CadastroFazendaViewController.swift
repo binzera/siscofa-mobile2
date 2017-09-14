@@ -49,7 +49,7 @@ class CadastroFazendaViewController: UIViewController {
         ]
         
         
-        let URL = "http://localhost:8080/siscofa/fazendas/cadastrarFazenda"
+        let URL = Configuracao.getWSURL() + "/fazendas/cadastrarFazenda"
         
         Alamofire.request(URL,  method: .post, parameters: parameters, encoding: JSONEncoding.default).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {

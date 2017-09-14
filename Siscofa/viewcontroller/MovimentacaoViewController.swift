@@ -50,7 +50,34 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         carregarArrayFazendas()
         carregarArrayTipoMovimentacao()
+        //self.addDoneButtonOnKeyboard()
     }
+    
+//    func addDoneButtonOnKeyboard()
+//    {
+//        var doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+//        doneToolbar.barStyle = UIBarStyle.BlackTranslucent
+//
+//        var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+//        var done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneButtonAction"))
+//
+//        var items = NSMutableArray()
+//        items.addObject(flexSpace)
+//        items.addObject(done)
+//
+//        doneToolbar.items = items
+//        doneToolbar.sizeToFit()
+//
+//        self.textView.inputAccessoryView = doneToolbar
+//        self.textField.inputAccessoryView = doneToolbar
+//
+//    }
+//
+//    func doneButtonAction()
+//    {
+//        self.textViewDescription.resignFirstResponder()
+//        self.textViewDescription.resignFirstResponder()
+//    }
     
     @IBAction func voltar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -99,7 +126,7 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
         ]
         
         
-        let URL = "http://localhost:8080/siscofa/movimentacao/inserir"
+        let URL = Configuracao.getWSURL() + "/movimentacao/inserir"
         
         Alamofire.request(URL,  method: .post, parameters: parameters, encoding: JSONEncoding.default).responseObject { (response: DataResponse<Resultado>) in
             //Verifica se houve erro com a requisição
@@ -129,7 +156,7 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func datePikerChangedAction(sender: UIDatePicker){
         let formatador = DateFormatter()
-        formatador.dateFormat = "YYY-MM-dd"
+        formatador.dateFormat = "YYYY-MM-dd"
         self.tfData.text = formatador.string(from: sender.date)
     }
     
@@ -163,7 +190,7 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
 //    }
     
     func carregarArrayTipoMovimentacao() {
-        let URL = "http://localhost:8080/siscofa/tipomov/listar"
+        let URL = Configuracao.getWSURL() + "/tipomov/listar"
         
         Alamofire.request(URL,  method: .get).responseObject { (response: DataResponse<Resultado>) in
             if response.error == nil {
@@ -180,7 +207,7 @@ class MovimentacaoViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func carregarArrayFazendas() {
         
-        let URL = "http://localhost:8080/siscofa/fazendas/fazendasOfUser"
+        let URL = Configuracao.getWSURL() + "/fazendas/fazendasOfUser"
         
         let usuarioLogado =  UtilSerializer().load()
         

@@ -14,12 +14,13 @@ class MovimentacaoGado : GenericEntity {
     var id : Int?
     var peso: Int?
     var quantidade : Int?
-    var sexo : Character?
+    var sexo : String?
     var valor : Double?
     var usuario : Usuario?
     var lote : Lote?
     var fazenda : Fazenda?
     var tipoMovimentacao : TipoMovimentacao?
+    var data : String?
     //var lotes : Array<Lote>
     //var movimentacoes : Array<MovimentacaoGado>
     
@@ -33,7 +34,7 @@ class MovimentacaoGado : GenericEntity {
         id = aDecoder.decodeObject(forKey: "id") as? Int
         quantidade = aDecoder.decodeObject(forKey: "quantidade") as? Int
         peso = aDecoder.decodeObject(forKey: "peso") as? Int
-        sexo = (aDecoder.decodeObject(forKey: "sexo") as? Character)!
+        sexo = (aDecoder.decodeObject(forKey: "sexo") as? String)!
         usuario = aDecoder.decodeObject(forKey: "usuario") as? Usuario
     }
     
@@ -63,6 +64,7 @@ class MovimentacaoGado : GenericEntity {
         tipoMovimentacao <- map["tipoMovimentacao"]
         updated <- map["updated"]
         created <- map ["created"]
+        data <- map["data"]
     }
     
     

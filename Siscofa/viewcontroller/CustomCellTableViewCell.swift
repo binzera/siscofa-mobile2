@@ -13,6 +13,8 @@ class CustomCellTableViewCell: UITableViewCell {
     @IBOutlet var lbPeso: UILabel!
     @IBOutlet var lbValor: UILabel!
     @IBOutlet var lbSexo: UILabel!
+    @IBOutlet var lbData: UILabel!
+    @IBOutlet var lbTipo: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
